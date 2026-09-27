@@ -1,1 +1,76 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>רום חיים רחמים בן רונית כהן ז״ל</title><style>body{margin:0;background:#111;color:#d8b66a;font-family:Arial;text-align:center;padding:60px 20px}h1{font-size:38px}p{color:#eee;font-size:20px}</style></head><body><h1>רום חיים רחמים בן רונית כהן ז״ל</h1><p>אתר ההנצחה פורסם בהצלחה.</p></body></html>
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0907">
+<title>רום חיים רחמים בן רונית כהן ז״ל</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#292015,#090806 58%);color:#f3eadb;font-family:Arial,"Noto Sans Hebrew",sans-serif;min-height:100vh}
+.wrap{max-width:980px;margin:auto;padding:18px}.hero{border:1px solid #b99652;border-radius:22px;padding:34px 20px;text-align:center;background:linear-gradient(145deg,#17120d,#050505);box-shadow:0 0 35px #000}
+h1{color:#d7ad55;font-size:clamp(30px,6vw,56px);margin:8px 0 12px}h2{color:#d7ad55;margin:8px 0 18px}h3{color:#e5c778}.sub{font-size:20px;color:#fff;margin:0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:20px 0}.card{border:1px solid #80632e;border-radius:16px;background:#15110d;padding:20px;text-align:center;cursor:pointer;transition:.2s}.card:hover{transform:translateY(-2px);background:#211a12}.icon{font-size:34px;margin-bottom:8px}.btn{display:inline-block;border:1px solid #b99652;color:#f2d78e;background:#17120d;border-radius:12px;padding:11px 16px;margin:5px;cursor:pointer}.page{display:none}.page.active{display:block}.box{background:#100d09;border:1px solid #695126;border-radius:18px;padding:20px;margin:16px 0;line-height:1.9}.ded{color:#d6b86d;text-align:center;margin:18px 0}.psgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:8px}.ps{padding:10px 4px}.text{font-size:20px;line-height:2.05;white-space:pre-wrap;text-align:right}.times{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}.time{background:#18120c;border:1px solid #594621;border-radius:12px;padding:12px;text-align:center}.clock{font-size:28px;color:#f0cf79}.small{color:#bdb3a4;font-size:14px}footer{text-align:center;color:#8d806e;padding:30px 10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+<h1>רום חיים רחמים בן רונית כהן ז״ל</h1>
+<p class="sub">אתר הנצחה, תפילה וזיכרון</p>
+<p class="ded">לעילוי נשמת רום חיים רחמים בן רונית כהן זכרונו לברכה</p>
+</header>
+<main id="home" class="page active">
+<div class="grid">
+<div class="card" onclick="show('psalms')"><div class="icon">📖</div><h3>תהילים</h3><div>כל 150 פרקי תהילים</div></div>
+<div class="card" onclick="show('prayers')"><div class="icon">🕯️</div><h3>תפילות וברכות</h3><div>קריאת שמע, ברכות השחר, קדיש ועוד</div></div>
+<div class="card" onclick="show('lulav')"><div class="icon">🌿</div><h3>חגים ומצוות</h3><div>מצוות והלכות לחיזוק ולעילוי נשמה</div></div>
+<div class="card" onclick="show('times')"><div class="icon">🕰️</div><h3>זמני ירושלים</h3><div>זמנים יומיים ושעון חי</div></div>
+<div class="card" onclick="show('kabbalot')"><div class="icon">✨</div><h3>קבלות וחיזוקים</h3><div>קבלות קטנות לעילוי נשמה</div></div>
+</div>
+<div class="box"><h2>לעילוי נשמה</h2><p>יהי רצון שכל תפילה, לימוד, מצווה וקבלה טובה שנעשית לזכרו תהיה לעילוי נשמתו, ותעמוד לזכות משפחתו וכלל ישראל.</p></div>
+</main>
+
+<section id="psalms" class="page">
+<button class="btn" onclick="show('home')">← חזרה</button>
+<div class="box"><h2>תהילים</h2><p>בחר פרק:</p><div id="psgrid" class="psgrid"></div><div id="ptext" class="box" style="display:none"><h2 id="ptitle"></h2><div id="body" class="text">טוען...</div><div class="ded">לעילוי נשמת רום חיים רחמים בן רונית כהן זכרונו לברכה</div></div></div>
+</section>
+
+<section id="prayers" class="page">
+<button class="btn" onclick="show('home')">← חזרה</button>
+<div class="box"><h2>תפילות וברכות</h2>
+<button class="btn" onclick="prayer('קריאת שמע')">קריאת שמע</button>
+<button class="btn" onclick="prayer('ברכות השחר')">ברכות השחר</button>
+<button class="btn" onclick="prayer('תפילת הדרך')">תפילת הדרך</button>
+<button class="btn" onclick="prayer('קדיש')">קדיש</button>
+<div id="prayerText" class="text" style="margin-top:20px"></div></div>
+</section>
+
+<section id="lulav" class="page"><button class="btn" onclick="show('home')">← חזרה</button>
+<div class="box"><h2>חגים ומצוות</h2><h3>מצוות ארבעת המינים</h3><p>נוטלים לולב, אתרוג, הדסים וערבות כהלכה ומברכים לפני קיום המצווה. יש להקפיד על כשרות ארבעת המינים ועל סדר הנטילה לפי המנהג.</p><div class="ded">לעילוי נשמת רום חיים רחמים בן רונית כהן זכרונו לברכה</div></div></section>
+
+<section id="kabbalot" class="page"><button class="btn" onclick="show('home')">← חזרה</button>
+<div class="box"><h2>20 קבלות קטנות לעילוי נשמה</h2><ol id="klist"></ol><div class="ded">כל קבלה טובה נעשית בלי נדר ולעילוי נשמת רום חיים רחמים בן רונית כהן זכרונו לברכה.</div></div></section>
+
+<section id="times" class="page"><button class="btn" onclick="show('home')">← חזרה</button>
+<div class="box"><h2>זמני היום בירושלים</h2><div class="clock" id="clock">--:--:--</div><div id="date" class="small"></div><div id="times" class="times" style="margin-top:15px"><div class="time">טוען זמנים...</div></div></div></section>
+
+<footer>לזכרו ולעילוי נשמתו של רום חיים רחמים בן רונית כהן ז״ל</footer>
+</div>
+<script>
+const dedication='לעילוי נשמת רום חיים רחמים בן רונית כהן זכרונו לברכה';
+function show(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');scrollTo(0,0)}
+const ps=document.getElementById('psgrid');
+for(let i=1;i<=150;i++){let b=document.createElement('button');b.className='btn ps';b.textContent='פרק '+i;b.onclick=()=>loadPsalm(i);ps.appendChild(b)}
+async function loadPsalm(n){
+document.getElementById('ptext').style.display='block';document.getElementById('ptitle').textContent='תהילים פרק '+n;document.getElementById('body').textContent='טוען את הפרק...';
+try{let r=await fetch('https://www.sefaria.org/api/texts/Psalms.'+n+'?lang=he&context=0');let j=await r.json();let t=(j.he||[]).join('\n');document.getElementById('body').textContent=t||'לא ניתן לטעון כרגע את הפרק. נסה שוב.'}catch(e){document.getElementById('body').textContent='לא ניתן לטעון את הפרק כרגע. יש לוודא חיבור לאינטרנט.'}
+}
+function prayer(n){
+const texts={
+'קריאת שמע':'שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד.\nבָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד.\n\nוְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ וּבְכָל מְאֹדֶךָ.',
+'ברכות השחר':'מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה, רַבָּה אֱמוּנָתֶךָ.\n\nבָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר נָתַן לַשֶּׂכְוִי בִינָה לְהַבְחִין בֵּין יוֹם וּבֵין לָיְלָה.',
+'תפילת הדרך':'יְהִי רָצוֹן מִלְּפָנֶיךָ יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, שֶׁתּוֹלִיכֵנוּ לְשָׁלוֹם וְתַצְעִידֵנוּ לְשָׁלוֹם, וְתַדְרִיכֵנוּ לְשָׁלוֹם, וְתַגִּיעֵנוּ לִמְחוֹז חֶפְצֵנוּ לְחַיִּים וּלְשִׂמְחָה וּלְשָׁלוֹם.',
+'קדיש':'יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא.\nבְּעָלְמָא דִּי בְרָא כִרְעוּתֵהּ, וְיַמְלִיךְ מַלְכוּתֵהּ...\n\nעֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו, הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל, וְאִמְרוּ אָמֵן.'
+};document.getElementById('prayerText').textContent=texts[n]+'\n\n'+dedication}
+const ks=['להתפלל בכוונה','לברך ברכות בכוונה','ללמוד משנה או הלכה','לומר פרק תהילים','לשמור על הלשון','לעזור להורה בבית','לתת צדקה','לכבד אדם מבוגר','להקדים שלום לחבר','להימנע מלשון הרע','ללמוד תורה כמה דקות','לקרוא קריאת שמע בכוונה','לברך ברכת המזון בכוונה','לשמוח במצווה','לעשות חסד','לסלוח למי שפגע בי','לכבד שבת וחג','להודות על הטוב','לעשות מעשה טוב בסתר','לקבוע זמן יומי לתפילה'];document.getElementById('klist').innerHTML=ks.map(x=>'<li>'+x+'</li>').join('');
+function tick(){let d=new Date();document.getElementById('clock').textContent=d.toLocaleTimeString('he-IL');document.getElementById('date').textContent=d.toLocaleDateString('he-IL',{weekday:'long',year:'numeric',month:'long',day:'numeric'});document.getElementById('times').innerHTML='<div class="time">הזמנים נטענים לפי ירושלים...</div>';fetch('https://www.hebcal.com/zmanim?cfg=json&geonameid=281184&date='+d.toISOString().slice(0,10)).then(r=>r.json()).then(j=>{let z=j.times||j;let map={'עלות השחר':'chatzotNight','טלית ותפילין':'misheyakir','הנץ החמה':'sunrise','סוף זמן קריאת שמע':'sofZmanShma','חצות היום':'chatzot','מנחה גדולה':'minchaGedola','שקיעה':'sunset','צאת הכוכבים':'dusk'};document.getElementById('times').innerHTML=Object.entries(map).map(([a,k])=>'<div class="time"><b>'+a+'</b><br>'+((z[k]||'').split('T').pop()?.slice(0,5)||'—')+'</div>').join('')}).catch(()=>{})}tick();setInterval(tick,1000*60);
+</script>
+</body></html>
