@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/gallery.js": {
+      "maxDuration": 10
+    }
+  }
+}
